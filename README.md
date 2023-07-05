@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDg4MjcxOTFkMGU3M2U2ZTc5Mzc4ODI4Zjc2YzFiM2Q0NmRmMmFlMSZjdD1n/f3iwJFOVOwuy7K6FFw/giphy.gif" width="200">
 
-<h1 align="center"> Proyecto Web E-commerce </h1>
+<h1 align="center"> Proyecto Website_E-commerce </h1>
 
 <p align="left">
    <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
