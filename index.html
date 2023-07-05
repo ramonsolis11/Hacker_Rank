@@ -3,19 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hacker Rank</title>
 
     <!-- style css  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
 
     <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 
     <!-- sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+
 </head>
 <body>
+
+        <!-- top navbar -->
+        <div class="top-navbar">
+            <p>Welcome To Hacker Rank</p>
+            <div class="icons">
+    <a href="register.html"><img src="./assets/img/register.png" alt="" width="18px">Register</a>
+    <a href="login.html"><img src="./assets/img/register.png" alt="" width="18px">Login</a>
+            </div>
+        </div>
     
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" id="logo"><span id="span1">H</span>acker <span>Rank</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><img src="./assets/img/menu.png" alt="" width="30px"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                    <li><a class="dropdown-item" href="junior.html">Junior</a></li>
+                    <li><a class="dropdown-item" href="senior.html">Senior</a></li>
+                    <li><a class="dropdown-item" href="master.html">Master</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                </ul>
+                <form class="d-flex" id="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./assets/img/html.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>HTML (Hypertext Markup Language)</h5>
+            <p>Is the standard markup language used for creating web pages and web applications.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./assets/img/bootstrap.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>Bootstrap</h5>
+            <p>Bootstrap is a popular front-end framework for building responsive and mobile-first web projects.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./assets/img/javascript.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>JavaScript</h5>
+            <p> Is a high-level programming language primarily used for creating interactive and dynamic functionality on websites</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section>
+    <!-- product cards -->
+    <div class="container" id="product-cards">
+        <h1 class="text-center">JUNIOR</h1>
+        <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+            <img src="./assets/img/junior1.jpg" alt="">
+            <div class="card-body">
+                <h3 class="text-center">Challenges 1</h3>
+                <p class="text-center">JavaScript structures, events, and functions.</p>
+                <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+            </div>
+        </div>
+    
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+            <img src="./assets/img/junior2.jpg" alt="">
+            <div class="card-body">
+                <h3 class="text-center">Challenges 2</h3>
+                <p class="text-center">JavaScript structures, events, and functions.</p>
+                <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+            </div>
+        </div>
+    
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+            <img src="./assets/img/junior3.jpg" alt="">
+            <div class="card-body">
+                <h3 class="text-center">Challenges 3</h3>
+                <p class="text-center">JavaScript structures, events, and functions.</p>
+                <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+            <img src="./assets/img/master4.jpg" alt="">
+            <div class="card-body">
+                <h3 class="text-center">Challenges 4</h3>
+                <p class="text-center">JavaScript structures, events, and functions.</p>
+                <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+            </div>
+        </div>
+    
+        <div class="container" id="product-cards">
+            <h1 class="text-center">SENIOR</h1>
+            <div class="row" style="margin-top: 30px;">
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                <img src="./assets/img/senior1.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="text-center">Challenges 5</h3>
+                    <p class="text-center">JavaScript structures, events, and functions.</p>
+                    <div class="star text-center">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    </div>
+                    <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                <img src="./assets/img/senior2.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="text-center">Challenges 6</h3>
+                    <p class="text-center">JavaScript structures, events, and functions.</p>
+                    <div class="star text-center">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    </div>
+                    <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                <img src="./assets/img/senior3.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="text-center">Challenges 7</h3>
+                    <p class="text-center">JavaScript structures, events, and functions.</p>
+                    <div class="star text-center">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    </div>
+                    <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                <img src="./assets/img/senior4.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="text-center">Challenges 8</h3>
+                    <p class="text-center">JavaScript structures, events, and functions.</p>
+                    <div class="star text-center">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    </div>
+                    <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                </div>
+                </div>
+            </div>
+    
+            <div class="container" id="product-cards">
+                <h1 class="text-center">MASTER</h1>
+                <div class="row" style="margin-top: 30px;">
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                    <img src="./assets/img/master1.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 9</h3>
+                        <p class="text-center">JavaScript structures, events, and functions.</p>
+                        <div class="star text-center">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                    <img src="./assets/img/master2.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 10</h3>
+                        <p class="text-center">JavaScript structures, events, and functions.</p>
+                        <div class="star text-center">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                    <img src="./assets/img/master3.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 11</h3>
+                        <p class="text-center">JavaScript structures, events, and functions.</p>
+                        <div class="star text-center">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 py-4 py-md-0">
+                    <div class="card">
+                    <img src="./assets/img/master4.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 12</h3>
+                        <p class="text-center">JavaScript structures, events, and functions.</p>
+                        <div class="star text-center">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <h2>$5 <span class="add-to-cart"><li class="fa-solid fa-cart-shopping"></li></span></h2>
+                    </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- banner -->
+    <section class="banner">
+        <div class="content">
+            <h1> <span>Hacker Rank</span>
+                <br>
+                Up To <span id="span2">50%</span> Off
+            </h1>
+                <p>Special Offer at Hacker Rank! Save up to 50% off on our courses and challenges.
+                <br>Don't miss out on this amazing deal!.
+                </p>
+            <div class="btn"><button>Shop Now</button></div>
+            
+        </div>
+            <div class="img">
+            <img src="./assets/img/banner.jpg" alt="">
+            </div>
+    </section>
+
+    <!-- newslater -->
+    <div class="container" id="newslater">
+        <h3 class="text-center">Subscribe To The Hacker Rank For Latest upload.</h3>
+        <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+    
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Hacker Rank</h3>
+                    <strong>Phone:</strong> +1 714-123-456 <br>
+                    <strong>Email:</strong> hackerRank@.com <br>
+                    <strong>Address:</strong> Pennsylvania Av, Washington DC <br>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Challenges</h4>
+
+                    <ul>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">Hooks</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Laravel</a></li>
+                        <li><a href="#">MongoDB</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Usefull Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy policey</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <div class="socail-links mt-2">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <hr>
+            <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Hacker Rank</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">Group 4</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="arrow"><i><img src="./assets/img/arrow.png" alt=""></i></a>
+
+
+
+<!-- script js  -->
+<script src="./assets/js/script.js"></script>
+
 </body>
+
+<!-- script bootstrap y jQuery  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
 </html>
