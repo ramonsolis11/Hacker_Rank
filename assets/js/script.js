@@ -9,31 +9,40 @@
     });
 
     //TODO: SweetAlert2
-    const addToCartIcons = document.querySelectorAll('.add-to-cart');
+// Obtener todos los elementos con la clase 'add-to-cart'
+const addToCartButtons = document.getElementsByClassName('add-to-cart');
 
-    addToCartIcons.forEach(function(icon) {
-        icon.addEventListener('click', function() {
-            Swal.fire({
-            title: 'Add to cart',
-            text: '¿Do you want to add this product to the cart?',
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Yes, add',
-            cancelButtonText: 'Cancel'
-            }).then((result) => {
-            if (result.isConfirmed) {
-                // Obtén el valor de la sección actual
-                const section = icon.closest('section').id;
+// Agregar un controlador de eventos a cada botón
+for (let i = 0; i < addToCartButtons.length; i++) {
+    addToCartButtons[i].addEventListener('click', redirectToSection);
+}
+
+// Controlador de eventos para redireccionar según la sección seleccionada
+function redirectToSection() {
+    const section = this.closest('.container').querySelector('h1').textContent.trim().toLowerCase();
     
-                // Redirige a la página correspondiente según la sección
-                if (section === 'junior-section') {
-                window.location.href = 'junior.html';
-                } else if (section === 'senior-section') {
-                window.location.href = 'senior.html';
-                } else if (section === 'master-section') {
-                window.location.href = 'master.html';
-                }
+    let pageUrl = '';
+
+    if (section === 'junior') {
+        pageUrl = 'junior.html';
+    } else if (section === 'senior') {
+        pageUrl = 'senior.html';
+    } else if (section === 'master') {
+        pageUrl = 'master.html';
+    }
+
+    if (pageUrl !== '') {
+        Swal.fire({
+            title: 'Product added to cart!',
+            text: 'You will be redirected to the selected section.',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'OK',
+            allowOutsideClick: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = pageUrl;
             }
-            });
         });
-    });
+    }
+}
