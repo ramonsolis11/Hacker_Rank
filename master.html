@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>master-section</title>
 
-        <!-- style css  -->
-        <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- style css  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-        <!-- font-awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-        <!-- bootstrap links -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
-    
-        <!-- fonts links -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    
-        <!-- sweetalert2 -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <!-- fonts links
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> -->
+
+    <!-- sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
         <!-- top navbar -->
@@ -72,6 +72,84 @@
         </nav>
 
 
+<section>
+    <!-- cards Master -->
+    <div class="container" id="product-cards">
+        <h1 class="text-center">Master</h1>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./assets/img/senior1.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 9</h3>
+                        <p class="text-center">The load of 10 integer values is carried out by keyboard.</p>
+                        <div class="star text-center">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <button class="btn" onclick="contarValores()">Verificar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./assets/img/senior2.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 10</h3>
+                        <p class="text-center">Create a Function to calculate the discount on tourist trips.</p>
+                        <div class="star text-center">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <button class="btn" onclick="obtenerNumero()">Verificar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./assets/img/senior3.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 11</h3>
+                        <p class="text-center">Make a program for a website, the website shows the weighted average score as a result.</p>
+                        <div class="star text-center">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <button class="btn" onclick="obtenerTemperatura()">Verificar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./assets/img/senior4.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="text-center">Challenges 12</h3>
+                        <p class="text-center">Create a function that validates the data inputs of a form.</p>
+                        <div class="star text-center">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        <button class="btn" onclick="ingresarEdades()">Verificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 
@@ -114,8 +192,8 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Usefull Links</h4>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
                             <li><a href="#">Category</a></li>
                             <li><a href="#">Terms of service</a></li>
                             <li><a href="#">Privacy policey</a></li>
@@ -136,7 +214,7 @@
                         &copy; Copyright <strong><span>Hacker Rank</span></strong>. All Rights Reserved
                     </div>
                     <div class="credits">
-                        Designed by <a href="#">Group 4</a>
+                        Designed by <a href="index.html">Group 4</a>
                     </div>
                 </div>
                     </div>
@@ -151,6 +229,7 @@
 
 <!-- script js  -->
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/challenges.js"></script>
 
 </body>
 

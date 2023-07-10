@@ -566,3 +566,28 @@ html{
     background-color: rgb(67 0 86);
     color: white;
 }
+
+/* boton verificar edad */
+button.btn {
+    margin-left: 13px;
+    margin-top: 10px;
+    width: 150px;
+    height: 32px;
+    letter-spacing: 3px;
+    background-color: rgb(67, 0, 86);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #ffc800;
+    color: black;
+    border: none;
+}
+
+
+
+
