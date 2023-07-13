@@ -59,9 +59,6 @@ El proyecto se desarrolló como parte de la asignatura FSJ-18 bajo la tutoría d
 12. Ejercicio 12: Calcular el promedio de edades en diferentes turnos y determinar el turno con mayor promedio.
 
 
-Se agradece la contribución de todos los colaboradores en la finalización exitosa de este proyecto.
-
-
 
 
 
