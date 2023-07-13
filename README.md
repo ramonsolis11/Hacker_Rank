@@ -25,7 +25,7 @@
   
 
    <h4 align="center">
-:construction: Proyecto en construcción :construction:
+:construction: Proyecto en finalizado :construction:
 </h4>
 
 # Proyecto: Guía JavaScript - Estructuras de Control y DOM
