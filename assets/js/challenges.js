@@ -1,3 +1,175 @@
+/*EJERCICIO 5:*/
+
+function obtenerDescuento() {
+    Swal.fire({
+        title: '<i class="fas fa-car"></i> Selección de coche',
+        html:
+            '<select class="form-control col-12" id="coche">' +
+                '<option value="FORD FIESTA">FORD FIESTA</option>' +
+                '<option value="FORD FOCUS">FORD FOCUS</option>' +
+                '<option value="FORD ESCAPE">FORD ESCAPE</option>' +
+            '</select>',
+        showCancelButton: true,
+        confirmButtonText: "Continuar",
+        preConfirm: () => {
+            const cocheSeleccionado = document.getElementById('coche').value;
+            let descuento = 0;
+
+            if (cocheSeleccionado === "FORD FIESTA") {
+                descuento = 5;
+            } else if (cocheSeleccionado === "FORD FOCUS") {
+                descuento = 10;
+            } else if (cocheSeleccionado === "FORD ESCAPE") {
+                descuento = 20;
+            }
+
+            return { coche: cocheSeleccionado, descuento: descuento };
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const cocheSeleccionado = result.value.coche;
+            const descuento = result.value.descuento;
+
+            Swal.fire({
+                title: ' Resultado',
+                html:
+                    '<p><i class="fas fa-car"></i> <strong>Coche seleccionado:</strong> ' + cocheSeleccionado + '</p>' +
+                    '<p><i class="fas fa-percentage"></i> <strong>Descuento aplicado:</strong> ' + descuento + '%</p>',
+                confirmButtonText: 'OK',
+                showCancelButton: true,
+            });
+        }
+    });
+}
+
+/*EJERCICIO 6 */
+
+function Viajes() {
+    Swal.fire({
+      title: '<i class="fas fa-globe-americas fa-2x"></i> Viajes Turísticos',
+      html: `
+        <form onsubmit="return calcularDescuento()">
+          <p><div class="form-group">
+            <label for="origen" class="form-label">Origen:</label>
+            <select id="origen" class="form-input">
+              <option value="Palma">Palma</option>
+              <option value="Otro origen">Otro origen</option>
+            </select>
+          </div></p>
+  
+          <div class="form-group">
+         <p><label for="destino" class="form-label">Destino:</label>
+            <select id="destino" class="form-input">
+              <option value="La costa del Sol">La costa del Sol</option>
+              <option value="Panchimalco">Panchimalco</option>
+              <option value="Puerto el Triunfo">Puerto el Triunfo</option>
+              <option value="Otro destino">Otro destino</option>
+            </select>
+          </div></p>
+  
+         <p><button type="submit" class="submit-button"><i class="fas fa-calculator fa-lg"></i></button>
+        </form></p>
+      `,
+      showConfirmButton: false,
+      customClass: {
+        confirmButton: 'swal2-styled swal2-confirm-button',
+        icon: 'swal2-icon'
+      }
+    });
+  }
+  
+  function calcularDescuento() {
+    var origen = document.getElementById("origen").value;
+    var destino = document.getElementById("destino").value;
+  
+    var descuento = 0;
+  
+    if (origen === 'Palma' && destino === 'La costa del Sol') {
+      descuento = 5;
+    } else if (destino === 'Panchimalco') {
+      descuento = 10;
+    } else if (destino === 'Puerto el Triunfo') {
+      descuento = 15;
+    }
+  
+    // Mostrar el resultado en HTML utilizando SweetAlert
+    Swal.fire({
+      title: 'Descuento en Viaje Turístico',
+      html: '<p>Origen: ' + origen + '</p>' +
+        '<p>Destino: ' + destino + '</p>' +
+        '<p>Descuento aplicado: ' + descuento + '%</p>',
+      icon: 'info',
+      confirmButtonText: 'Aceptar',
+      customClass: {
+        confirmButton: 'swal2-styled swal2-confirm-button',
+        icon: 'swal2-icon'
+      }
+    });
+    return false; // Evitar que el formulario se envíe
+  }
+  
+/*EJERCIOCIO 7*/
+function Notas() {
+    Swal.fire({
+      title: '<i class="fas fa-clipboard"></i> Calculadora de Nota Media Ponderada',
+      html:
+        '<p><div class="form-group">' +
+        '<label for="nota1" class="form-label">Nota 1 : </label>' +
+        '<input type="number" id="nota1" class="form-input" step="0.01" required>' +
+        '</div></p>' +
+        '<p><div class="form-group">' +
+        '<label for="ponderacion1" class="form-label">Ponderación 1 : </label>' +
+        '<input type="number" id="ponderacion1" class="form-input" step="0.01" required>' +
+        '</div></p>' +
+        '<p><div class="form-group">' +
+        '<label for="nota2" class="form-label">Nota 2 : </label>' +
+        '<input type="number" id="nota2" class="form-input" step="0.01" required>' +
+        '</div></p>' +
+        '<p><div class="form-group">' +
+        '<label for="ponderacion2" class="form-label">Ponderación 2 : </label>' +
+        '<input type="number" id="ponderacion2" class="form-input" step="0.01" required>' +
+        '</div></p>',
+      showCancelButton: true,
+      confirmButtonText: 'Calcular',
+      cancelButtonText: 'Cancelar',
+      preConfirm: () => {
+        calcularNotaMediaPonderada();
+      }
+    });
+  }
+
+  /*ejercicio 8*/
+  function Formulario() {
+    swal.fire({
+      title: "Formulario",
+      html: `<input type="text" id="nombre" placeholder="Nombre" class="swal2-input">
+             <input type="email" id="email" placeholder="Email" class="swal2-input">
+             <textarea id="mensaje" placeholder="Mensaje" class="swal2-textarea"></textarea>`,
+      showCancelButton: true,
+      confirmButtonText: "Enviar",
+      cancelButtonText: "Cancelar",
+      focusConfirm: false,
+      preConfirm: () => {
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+  
+        if (nombre === '' || email === '' || mensaje === '') {
+          return swal.showValidationMessage("Por favor, complete todos los campos del formulario");
+        }
+  
+        return { nombre: nombre, email: email, mensaje: mensaje };
+      }
+    }).then(result => {
+      if (result.isConfirmed) {
+        const { nombre, email, mensaje } = result.value;
+        const mensajeAlerta = 'Nombre: ' + nombre + '\nEmail: ' + email + '\nMensaje: ' + mensaje;
+        swal.fire('Datos ingresados', mensajeAlerta, 'success');
+      }
+    });
+  }
+  
+
 /*EJERCICIO 9:
 Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
 · La cantidad de valores negativos ingresados.
