@@ -20,7 +20,12 @@ function verificarEdad() {
 
         preConfirm:(edad) => {  // Funtion que se ejecuta antes de cerrar la ventana
             // Comienzo a condicionar o evaluar la edad ingresada
-            edad >= 18 ?  "Eres mayor de edad" : "Eres menos de edad";
+            if(edad >= 18) {
+                return "Eres mayor de edad";
+            }else {
+                return "Eres menos de edad";
+            }
+            //edad >= 18 ?  "Eres mayor de edad" : "Eres menos de edad";
         },
         allowOutsideClick: () => !swal.isLoading()  // permite hacer click fuera de la ventana emergente para poder cerrarla, excepto cuando se esta cargando.
 
