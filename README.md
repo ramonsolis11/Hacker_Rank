@@ -7,6 +7,9 @@
    <img src="https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen">
 </p>
 
+Visita mi [sitio web](https://hacker-ranks.netlify.app/) para obtener más información.
+
+
 
 ![Portada](https://github-production-user-asset-6210df.s3.amazonaws.com/80738178/250660240-fc6c5ea3-2ee9-41b7-810f-b2e9a73b9262.PNG)
 
@@ -16,7 +19,13 @@
 
 ![master-section](https://github.com/ramonsolis11/Hacker_Rank/assets/80738178/c59e7194-60b7-4ce5-82a7-9d5d9a23f5c9)
 
-![responsive](https://github.com/ramonsolis11/Hacker_Rank/assets/80738178/07c873cf-b857-44dc-946f-355702f89b6d)
+![responsive-Phone](https://github.com/ramonsolis11/Hacker_Rank/assets/80738178/07c873cf-b857-44dc-946f-355702f89b6d)
+
+![responsive-iPad](https://github.com/ramonsolis11/Hacker_Rank/assets/80738178/c4839b79-d200-47f6-a58e-1e5a883535ab)
+
+![register](https://github.com/ramonsolis11/Hacker_Rank/assets/80738178/b379a90d-6b56-443c-a4f9-0714efddcb00)
+
+
 
 
 
@@ -25,7 +34,7 @@
   
 
    <h4 align="center">
-:construction: Proyecto en finalizado :construction:
+:construction: Proyecto finalizado :construction:
 </h4>
 
 # Proyecto: Guía JavaScript - Estructuras de Control y DOM
