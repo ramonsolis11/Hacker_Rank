@@ -199,6 +199,17 @@
     }
 }
 
+#calcular-btn {
+    /* Estilos específicos para el botón "Calcular Aumento" */
+    background-color: rgb(67 0 86);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 /* banner */
 .banner{

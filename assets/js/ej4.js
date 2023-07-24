@@ -10,13 +10,13 @@ function encontrarNumeroMayor(num1, num2) {
         } else if (num2 > num1) {
         mayor = num2;
         } else {
-        Iguales = "Los números son iguales";
+        mayor = "Los números son iguales";
         }
     
         return mayor;
     }
     
-    function NumeroMayor() {
+    function obtenerNumeros() {
         swal.fire({
         title: "Ingresar Números",
         html:
@@ -24,17 +24,16 @@ function encontrarNumeroMayor(num1, num2) {
             '<input id="swal-input-num2" class="swal2-input" placeholder="Número 2">',
         focusConfirm: false,
         preConfirm: () => {
-            const num1 = parseInt(document.querySelector('#swal-input-num1'));
-            const num2 = parseInt(document.querySelector('#swal-input-num2'));
+            const num1 = parseInt(document.getElementById('swal-input-num1').value);
+            const num2 = parseInt(document.getElementById('swal-input-num2').value);
     
             const mayor = encontrarNumeroMayor(num1, num2);
-
     
             swal.fire({
-            title: "El número mayor de los 2 ingresados",
+            title: "Número Mayor",
             text: mayor,
             icon: "info"
             });
         }
-        });
-        }
+    });
+}
