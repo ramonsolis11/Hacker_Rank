@@ -1,0 +1,33 @@
+<!-- Sección del banner -->
+<section class="banner">
+  <!-- Contenedor del contenido del banner -->
+  <div class="content">
+    <!-- Título principal del banner -->
+    <h1>
+      <!-- Nombre de la marca -->
+      <span>HackerRank</span>
+      <br>
+      <!-- Descuento actual -->
+      Up To <span id="discount">50%</span> Off
+    </h1>
+    <!-- Descripción del banner -->
+    <p>
+      Special Offer at HackerRank! Save up to 50% off on our courses and challenges.
+      <br>
+      Don't miss out on this amazing deal!
+    </p>
+    <!-- Botón de acción -->
+    <div class="btn">
+      <!-- Enlace para redirigir a la página principal -->
+      <a href="index.html">
+        <!-- Botón para "Shop Now" -->
+        <button>Shop Now</button>
+      </a>
+    </div>
+  </div>
+  <!-- Contenedor de la imagen del banner -->
+  <div class="img">
+    <!-- Imagen del banner con una descripción alternativa -->
+    <img src="./assets/img/banner.jpg" alt="HackerRank Banner">
+  </div>
+</section>
